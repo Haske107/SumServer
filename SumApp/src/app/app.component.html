@@ -10,20 +10,34 @@
 
 </div>
 
-<div class="Title-Card-Parent">
+<div class="Title-Card-Parent" *ngIf="!validated">
   <mat-card class="Title-Card">
     <div class="Title-Wrapper row">
       <h1 class="Title">SUM</h1>
     </div>
-    <div class="Password-Wrapper row">
-      <mat-form-field class="Password-Field">
-        <mat-label>Password</mat-label>
-        <input matInput placeholder="" value="" type="password">
-      </mat-form-field>
-    </div>
-    <div class="Enter-Key">
-      <img class="Arrow-Icon" src="../assets/SVG/next.svg">
-    </div>
+
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <div class="Password-Wrapper row">
+          <mat-form-field class="Password-Field">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="" value="" type="password"  formControlName="password">
+            <div *ngIf="validated && f.password.errors">
+              <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
+              <mat-error *ngIf="f.password.errors.mustMatch">You done did it wrong.</mat-error>
+            </div>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="Enter-Key" (click)="onSubmit()">
+          <img class="Arrow-Icon" src="../assets/SVG/next.svg">
+        </div>
+      </div>
+    </form>
+
+
   </mat-card>
 </div>
 

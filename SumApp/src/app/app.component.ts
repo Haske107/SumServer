@@ -1,5 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {transition, style, animate, trigger, state} from "@angular/animations";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {MustMatch} from './helper/validate-password';
 
 @Component({
   selector: 'app-root',
@@ -26,14 +29,25 @@ import {transition, style, animate, trigger, state} from "@angular/animations";
 })
 export class AppComponent implements OnInit, OnDestroy {
 
+  registerForm: FormGroup;
+  validated = false;
+
+  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar) {
+    this.registerForm = this.formBuilder.group({
+      password: ['', [Validators.required]],
+    }, {
+      validator: MustMatch('password')
+    });
+  }
 
   ngOnInit()  {
-    this.photo_rotate_start()
+    this.photo_rotate_start();
   }
 
   ngOnDestroy() {
-    this.photo_rotate_end()
+    this.photo_rotate_end();
   }
+
 
 
 
@@ -76,12 +90,20 @@ export class AppComponent implements OnInit, OnDestroy {
 
     }
 
-    //check if password is good
 
+  get f() { return this.registerForm.controls; }
 
-    //swap pages
+    onSubmit() {
 
+      // stop here if form is invalid
+      if (this.registerForm.invalid) {
+        return;
+      } else {
+        this.snackBar.open('Welcome, Friend');
+        this.validated = true;
 
+      }
 
+    }
 
 }
