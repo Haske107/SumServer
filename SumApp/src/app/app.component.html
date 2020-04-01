@@ -1,3 +1,6 @@
+<div class="container">
+
+
 <div class="background-still" >
 
   <img *ngIf="Still_Photo_ID === 1" src="../assets/SUM%20STILLS/Still_1.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
@@ -10,7 +13,7 @@
 
 </div>
 
-<div class="Title-Card-Parent" *ngIf="!validated">
+<div class="Title-Card-Parent" *ngIf="!validated" [@slideInOut]>
   <mat-card class="Title-Card">
     <div class="Title-Wrapper row">
       <h1 class="Title">SUM</h1>
@@ -41,3 +44,4 @@
   </mat-card>
 </div>
 
+</div>

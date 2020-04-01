@@ -24,6 +24,11 @@ import {MustMatch} from './helper/validate-password';
       // fade out when destroyed. this could also be written as transition('void => *')
       transition(':leave',
         animate(900, style({opacity: 0})))
+    ]),
+    trigger('slideInOut', [
+      transition(':leave', [
+        animate('400ms cubic-bezier(0.35, 0, 0.25, 1)', style({transform: 'translateX(300%)'}))
+      ])
     ])
   ]
 })
@@ -80,7 +85,7 @@ export class AppComponent implements OnInit, OnDestroy {
       // assign ID
       if (this.Still_Photo_Selector)  {
         this.Still_Photo_ID = this.Still_Photo_Counter;
-        this.Still_Photo_Counter += 1
+        this.Still_Photo_Counter += 1;
       } else  {
         this.Still_Photo_ID = 0;
       }
@@ -93,13 +98,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   get f() { return this.registerForm.controls; }
 
-    onSubmit() {
+  onSubmit() {
 
       // stop here if form is invalid
       if (this.registerForm.invalid) {
         return;
       } else {
-        this.snackBar.open('Welcome, Friend');
+        this.snackBar.open('Welcome, Friend', "", {
+          duration: 1000
+        });
         this.validated = true;
 
       }
