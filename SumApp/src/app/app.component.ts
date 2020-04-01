@@ -37,7 +37,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
 
-  title = 'app';
 
   // VARIABLES
   Still_Photo_Selector = false;
@@ -45,40 +44,43 @@ export class AppComponent implements OnInit, OnDestroy {
   Still_Photo_ID = 1;
   Still_Photo_TimeOut;
 
+  Password = "TunaFishBish";
+
   // FUNCTIONS
-  photo_rotate_start()  {
-    this.Still_Photo_TimeOut = setInterval(() =>  {
-      this.rotate_photos()
-    }, 2000);
-  }
-
-  photo_rotate_end()  {
-    clearInterval(this.Still_Photo_TimeOut);
-  }
-
-  rotate_photos() {
-
-
-
-    // check if counter is in range
-    if (this.Still_Photo_Counter > 7)
-      this.Still_Photo_Counter = 1;
-
-    // flip selector
-    this.Still_Photo_Selector = !this.Still_Photo_Selector;
-
-    // assign ID
-    if (this.Still_Photo_Selector)  {
-      this.Still_Photo_ID = this.Still_Photo_Counter;
-      this.Still_Photo_Counter += 1
-    } else  {
-      this.Still_Photo_ID = 0;
+    photo_rotate_start()  {
+      this.Still_Photo_TimeOut = setInterval(() =>  {
+        this.rotate_photos();
+      }, 2000);
     }
 
+    photo_rotate_end()  {
+      clearInterval(this.Still_Photo_TimeOut);
+    }
+
+    rotate_photos() {
+      // check if counter is in range
+      if (this.Still_Photo_Counter > 7)
+        this.Still_Photo_Counter = 1;
+      // flip selector
+      this.Still_Photo_Selector = !this.Still_Photo_Selector;
+      // assign ID
+      if (this.Still_Photo_Selector)  {
+        this.Still_Photo_ID = this.Still_Photo_Counter;
+        this.Still_Photo_Counter += 1
+      } else  {
+        this.Still_Photo_ID = 0;
+      }
 
 
 
-  }
+
+    }
+
+    //check if password is good
+
+
+    //swap pages
+
 
 
 

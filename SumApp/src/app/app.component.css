@@ -9,25 +9,76 @@
   transition: .3s ;
   z-index: -1;
 }
+  .background-image-wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    transition: .3s ;
+  }
 
 
-.background-image-wrapper {
-  min-height: 100vh;
-  min-width: 100vw;
+
+.Title-Card-Parent  {
+  position: absolute;
   overflow: hidden;
-  transition: .3s ;
-
+  height: 500px;
+  width: 500px;
+  top: calc(50% - 250px);
+  left: calc(50% - 250px);
 }
+  .Title-Card {
+    position: absolute;
+    height: 468px;
+    width: 468px;
+    background-color: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(8px);
 
-.title  {
-  font-family: 'Josefin', sans-serif;
-  font-weight: 500;
-  font-size: 250px;
-  color:whitesmoke;
-  filter: blur(1px);
-}
+  }
+    .Title-Wrapper  {
+      position: absolute;
+      width: 468px;
+      height: 117px;
+      top: 0px;
+      z-index: 2;
+      text-align: center;
+      margin: 0;
+    }
+      .Title{
+        height: 117px;
+        padding-top: 117px;
+        font-family: 'Oleo Script', sans-serif;
+        font-size: 140px;
+        opacity: .8;
+        color: white;
+      }
+    .Password-Wrapper {
+      position: absolute;
+      width: 468px;
+      height: 234px;
+      bottom: 0;
+      z-index: 2;
+      text-align: center;
+    }
+  .Enter-Key  {
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    bottom: 48px;
+    left: calc(50% - 24px);
+    background-color: white;
+    border-radius: 24px;
+    z-index: 3;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: top;
+  }
+  .Enter-Key:hover  {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale(1.1);
+  }.Enter-Key:active  {
+     -webkit-transform: scale3d(1.0, 1.0, 1.0);
+     transform: scale(1.0);
+   }
 
-
-.Title-Row  {
-  text-align: center;
-}
+    .Arrow-Icon {
+      margin: 12px;
+    }

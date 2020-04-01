@@ -4,14 +4,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
 
-import {
-  MatButtonModule,
-  MatMenuModule,
-  MatToolbarModule,
-  MatIconModule,
-  MatCardModule
-} from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -21,10 +18,9 @@ import {
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
