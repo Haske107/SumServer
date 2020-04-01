@@ -6,7 +6,7 @@ export function MustMatch(controlName: string) {
     const control = formGroup.controls[controlName];
 
     // set error on matchingControl if validation fails
-    if (control.value !== 'TunaFishBish') {
+    if (control.value !== 'Tuna') {
       control.setErrors({ mustMatch: true });
     } else {
       control.setErrors(null);

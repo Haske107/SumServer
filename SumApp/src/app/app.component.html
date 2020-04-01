@@ -1,47 +1,41 @@
 <div class="container">
-
-
-<div class="background-still" >
-
-  <img *ngIf="Still_Photo_ID === 1" src="../assets/SUM%20STILLS/Still_1.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-  <img *ngIf="Still_Photo_ID === 2" src="../assets/SUM%20STILLS/Still_2.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-  <img *ngIf="Still_Photo_ID === 3" src="../assets/SUM%20STILLS/Still_3.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-  <img *ngIf="Still_Photo_ID === 4" src="../assets/SUM%20STILLS/Still_4.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-  <img *ngIf="Still_Photo_ID === 5" src="../assets/SUM%20STILLS/Still_5.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-  <img *ngIf="Still_Photo_ID === 6" src="../assets/SUM%20STILLS/Still_6.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-  <img *ngIf="Still_Photo_ID === 7" src="../assets/SUM%20STILLS/Still_7.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-
-</div>
-
-<div class="Title-Card-Parent" *ngIf="!validated" [@slideInOut]>
-  <mat-card class="Title-Card">
-    <div class="Title-Wrapper row">
-      <h1 class="Title">SUM</h1>
-    </div>
-
-
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <div class="Password-Wrapper row">
-          <mat-form-field class="Password-Field">
-            <mat-label>Password</mat-label>
-            <input matInput placeholder="" value="" type="password"  formControlName="password">
-            <div *ngIf="validated && f.password.errors">
-              <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
-              <mat-error *ngIf="f.password.errors.mustMatch">You done did it wrong.</mat-error>
-            </div>
-          </mat-form-field>
-        </div>
+  <div class="background-still" >
+    <img *ngIf="Still_Photo_ID === 1" src="../assets/SUM%20STILLS/Still_1.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'" >
+    <img *ngIf="Still_Photo_ID === 2" src="../assets/SUM%20STILLS/Still_2.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
+    <img *ngIf="Still_Photo_ID === 3" src="../assets/SUM%20STILLS/Still_3.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
+    <img *ngIf="Still_Photo_ID === 4" src="../assets/SUM%20STILLS/Still_4.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
+    <img *ngIf="Still_Photo_ID === 5" src="../assets/SUM%20STILLS/Still_5.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
+    <img *ngIf="Still_Photo_ID === 6" src="../assets/SUM%20STILLS/Still_6.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
+    <img *ngIf="Still_Photo_ID === 7" src="../assets/SUM%20STILLS/Still_7.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
+  </div>
+  <div class="Title-Card-Parent" *ngIf="!validated" [@CardSlideOut]>
+    <mat-card class="Title-Card">
+      <div class="Title-Wrapper row">
+        <h1 class="Title">SUM</h1>
       </div>
-      <div class="form-group">
-        <div class="Enter-Key" (click)="onSubmit()">
-          <img class="Arrow-Icon" src="../assets/SVG/next.svg">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <div class="Password-Wrapper row">
+            <mat-form-field class="Password-Field">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="" value="" type="password"  formControlName="password">
+              <div *ngIf="validated && f.password.errors">
+                <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
+                <mat-error *ngIf="f.password.errors.mustMatch">You done did it wrong.</mat-error>
+              </div>
+            </mat-form-field>
+          </div>
         </div>
-      </div>
-    </form>
-
+        <div class="form-group">
+          <div class="Enter-Key" (click)="onSubmit()">
+            <img class="Arrow-Icon" src="../assets/SVG/next.svg">
+          </div>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+  <mat-card class="Video-Container" *ngIf="validated" [@Videoslide]="'in'">
+    <video src="../assets/Render_f5cdd3f0-72f0-11ea-b022-022575d6b402.mp4"></video>
 
   </mat-card>
-</div>
-
 </div>

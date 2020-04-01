@@ -11,7 +11,6 @@ import {MustMatch} from './helper/validate-password';
   animations: [
     // the fade-in/fade-out animation.
     trigger('fade', [
-
       // the "in" style determines the "resting" state of the element when it is visible.
       state('in', style({opacity: 1})),
 
@@ -20,15 +19,22 @@ import {MustMatch} from './helper/validate-password';
         style({opacity: 0}),
         animate(900 )
       ]),
-
       // fade out when destroyed. this could also be written as transition('void => *')
       transition(':leave',
         animate(900, style({opacity: 0})))
     ]),
-    trigger('slideInOut', [
-      transition(':leave', [
+    trigger('CardSlideOut', [
+      transition('* => void', [
         animate('400ms cubic-bezier(0.35, 0, 0.25, 1)', style({transform: 'translateX(300%)'}))
       ])
+    ]),
+    trigger('Videoslide', [
+      state('in', style({transform: 'translateX(0%)'})),
+      transition('void => *', [
+        animate('400ms cubic-bezier(0.35, 0, 0.25, 1)', style({transform: 'translateX(0%)'}))
+      ]),
+      state('out', style({transform: 'translateX(-300%)'}))
+
     ])
   ]
 })
@@ -62,8 +68,6 @@ export class AppComponent implements OnInit, OnDestroy {
   Still_Photo_Counter = 1;
   Still_Photo_ID = 1;
   Still_Photo_TimeOut;
-
-  Password = "TunaFishBish";
 
   // FUNCTIONS
     photo_rotate_start()  {

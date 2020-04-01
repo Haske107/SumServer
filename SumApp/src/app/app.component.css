@@ -92,3 +92,21 @@
     .Arrow-Icon {
       margin: 12px;
     }
+.Video-Container  {
+  position: absolute;
+  height: 468px;
+  width: calc(468px * 1.778);
+  top: calc(50% - 234px);
+  left: calc(50% - (468px * 1.778)/2);
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(8px);
+  transform: translateX(-300%);
+  transition: transform 0.5s cubic-bezier(0.3, 0.2, 0.1, 1.2);
+}
+  .Current-Video  {
+    positon: absolute;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+  }
