@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="solid-white" [ngStyle]="{'opacity' : validated ? '1' : '0'} "></div>
   <div class="background-still" >
     <img *ngIf="Still_Photo_ID === 1" src="../assets/SUM%20STILLS/Still_1.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'" >
     <img *ngIf="Still_Photo_ID === 2" src="../assets/SUM%20STILLS/Still_2.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
@@ -35,7 +36,7 @@
     </mat-card>
   </div>
   <mat-card class="Video-Container" *ngIf="validated" [@Videoslide]="'in'">
-    <video src="../assets/Render_f5cdd3f0-72f0-11ea-b022-022575d6b402.mp4"></video>
+    <video class="Current-Video" src="https://source-media-sum.s3-us-west-1.amazonaws.com/renders/Render_46d02b18-72f1-11ea-b022-022575d6b402.mp4" controls autoplay></video>
 
   </mat-card>
 </div>

@@ -109,7 +109,7 @@ export class AppComponent implements OnInit, OnDestroy {
         return;
       } else {
         this.snackBar.open('Welcome, Friend', "", {
-          duration: 1000
+          duration: 3000
         });
         this.validated = true;
 
