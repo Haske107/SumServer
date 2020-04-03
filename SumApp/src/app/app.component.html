@@ -16,7 +16,7 @@
       </div>
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <div class="Password-Wrapper row">
+          <div class="Password-Wrapper">
             <mat-form-field class="Password-Field">
               <mat-label>Password</mat-label>
               <input matInput placeholder="" value="" type="password"  formControlName="password">
@@ -37,6 +37,37 @@
   </div>
 
   <mat-card class="Video-Container" *ngIf="validated" [@Videoslide]="'in'">
-    <video class="Current-Video" src="https://source-media-sum.s3-us-west-1.amazonaws.com/renders/Render_46d02b18-72f1-11ea-b022-022575d6b402.mp4" controls autoplay></video>
+    <video class="Current-Video" src="https://source-media-sum.s3-us-west-1.amazonaws.com/renders/Render_46d02b18-72f1-11ea-b022-022575d6b402.mp4" controls ></video>
+  </mat-card>
+
+  <mat-card class="Side-Panel" *ngIf="validated" [@Videoslide]="'in'">
+    <div class="Current-Details">
+      <div class="Current-Details-Title-Row">
+        <h2 class="Current-Details-Title">Current Render Stats</h2>
+      </div>
+      <div class="Current-Details-Info-Row">
+        <div class="Current-Details-Info-Col Col-1">
+          <div class="Sentiment-Title">
+            Sentiment
+          </div>
+          <img src="../assets/SVG/face1.svg" alt="" class="Sentiment-Icon">
+        </div>
+        <div class="Current-Details-Info-Col Col-2">
+          <div class="Sentiment-Title">
+            Chronology
+          </div>
+          <img src="../assets/SVG/face1.svg" alt="" class="Sentiment-Icon">
+        </div>
+        <div class="Current-Details-Info-Col Col-3">
+          <div class="Sentiment-Title">
+            Iteration
+          </div>
+          <img src="../assets/SVG/face1.svg" alt="" class="Sentiment-Icon">
+        </div>
+      </div>
+    </div>
+    <div class="row Next-Videos">
+
+    </div>
   </mat-card>
 </div>

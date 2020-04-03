@@ -48,7 +48,7 @@ export class AppComponent implements OnInit, OnDestroy {
   Still_Photo_ID = 1;
   Still_Photo_TimeOut;
   registerForm: FormGroup;
-  validated = false;
+  validated = true;
 
   constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private http: HttpClient) {
     this.registerForm = this.formBuilder.group({
