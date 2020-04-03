@@ -68,28 +68,24 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
 
-  // FUNCTIONS
-
+  // FUNCTION
     getRenderArray()  {
       this.http.get("http://localhost:3000/getRenders")
         .subscribe((data) =>  {
          console.log(data);
         });
     }
-
     photo_rotate_start()  {
       this.Still_Photo_TimeOut = setInterval(() =>  {
         this.rotate_photos();
       }, 2000);
     }
-
     photo_rotate_end()  {
       clearInterval(this.Still_Photo_TimeOut);
     }
-
     rotate_photos() {
       // check if counter is in range
-      if (this.Still_Photo_Counter > 7)
+      if (this.Still_Photo_Counter > 6)
         this.Still_Photo_Counter = 1;
       // flip selector
       this.Still_Photo_Selector = !this.Still_Photo_Selector;
@@ -105,20 +101,20 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
     }
+    onSubmit() {
 
+    // stop here if form is invalid
+    if (this.registerForm.invalid) {
+      return;
+    } else {
+      this.snackBar.open('Welcome, Friend', "", {
+        duration: 3000
+      });
+      this.validated = true;
+
+    }
+  }
     get f() { return this.registerForm.controls; }
 
-  onSubmit() {
 
-      // stop here if form is invalid
-      if (this.registerForm.invalid) {
-        return;
-      } else {
-        this.snackBar.open('Welcome, Friend', "", {
-          duration: 3000
-        });
-        this.validated = true;
-
-      }
-    }
 }
