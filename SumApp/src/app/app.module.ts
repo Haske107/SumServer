@@ -9,6 +9,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -23,9 +24,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatCardModule,
     MatInputModule,
     MatSnackBarModule,
-    ReactiveFormsModule
-
-
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

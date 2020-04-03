@@ -3,6 +3,7 @@ import {transition, style, animate, trigger, state} from "@angular/animations";
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MustMatch} from './helper/validate-password';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -38,12 +39,18 @@ import {MustMatch} from './helper/validate-password';
     ])
   ]
 })
+
 export class AppComponent implements OnInit, OnDestroy {
 
+  // VARIABLES
+  Still_Photo_Selector = false;
+  Still_Photo_Counter = 1;
+  Still_Photo_ID = 1;
+  Still_Photo_TimeOut;
   registerForm: FormGroup;
   validated = false;
 
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar) {
+  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private http: HttpClient) {
     this.registerForm = this.formBuilder.group({
       password: ['', [Validators.required]],
     }, {
@@ -53,6 +60,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit()  {
     this.photo_rotate_start();
+    this.getRenderArray();
   }
 
   ngOnDestroy() {
@@ -60,16 +68,15 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
 
-
-
-
-  // VARIABLES
-  Still_Photo_Selector = false;
-  Still_Photo_Counter = 1;
-  Still_Photo_ID = 1;
-  Still_Photo_TimeOut;
-
   // FUNCTIONS
+
+    getRenderArray()  {
+      this.http.get("http://localhost:3000/getRenders")
+        .subscribe((data) =>  {
+         console.log(data);
+        });
+    }
+
     photo_rotate_start()  {
       this.Still_Photo_TimeOut = setInterval(() =>  {
         this.rotate_photos();
@@ -99,8 +106,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     }
 
-
-  get f() { return this.registerForm.controls; }
+    get f() { return this.registerForm.controls; }
 
   onSubmit() {
 
@@ -114,7 +120,5 @@ export class AppComponent implements OnInit, OnDestroy {
         this.validated = true;
 
       }
-
     }
-
 }
