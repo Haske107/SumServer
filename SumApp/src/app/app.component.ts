@@ -49,9 +49,10 @@ export class AppComponent implements OnInit, OnDestroy {
   stillPhotoID = 1;
   stillPhotoTimeOut;
   registerForm: FormGroup;
-  validated = true;
+  validated = false;
   renderarray: any = [];
-  s3ContentLoaded = false;
+  contentLoaded = false;
+  SidePanelOpen = false;
 
   constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private http: HttpClient, private _ChangeDetectorRef: ChangeDetectorRef) {
     this.registerForm = this.formBuilder.group({
@@ -82,6 +83,7 @@ export class AppComponent implements OnInit, OnDestroy {
            });
         });
         this._ChangeDetectorRef.detectChanges();
+        this.contentLoaded = true;
       });
     }
     photo_rotate_start()  {
@@ -124,6 +126,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     }
   }
+
     get f() { return this.registerForm.controls; }
 
 

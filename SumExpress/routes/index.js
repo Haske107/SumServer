@@ -23,18 +23,14 @@ router.get('/getRenders', function(req, res, next) {
 
 // Call S3 to obtain a list of the objects in the bucket
     s3.listObjects(bucketParams, function (err, data) {
-
-        console.log("1");
-        // Create Render Array
-        var RenderList = [];
-        var Count = data.Contents.length;
         if (err) {
-            res.send('Error', err);
+            res.status('Error').send(err);
         } else {
+            // Create Render Array
+            var RenderList = [];
+            var Count = data.Contents.length;
             // Iterate through Contents to retrieve each render
             data.Contents.forEach(function (object) {
-                console.log("2");
-
                 if (object.Key !== 'renders/') {
                     var objectParams = {
                         Bucket: 'source-media-sum',

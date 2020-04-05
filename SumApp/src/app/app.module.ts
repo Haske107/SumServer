@@ -10,6 +10,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -24,6 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
     MatCardModule,
     MatInputModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule,
     ReactiveFormsModule,
     HttpClientModule
 

@@ -14,7 +14,7 @@
       <div class="Title-Wrapper row">
         <h1 class="Title">SUM</h1>
       </div>
-      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" *ngIf="contentLoaded">
         <div class="form-group">
           <div class="Password-Wrapper">
             <mat-form-field class="Password-Field">
@@ -27,20 +27,24 @@
             </mat-form-field>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" *ngIf="contentLoaded">
           <div class="Enter-Key" (click)="onSubmit()">
             <img class="Arrow-Icon" src="../assets/SVG/next.svg">
           </div>
         </div>
       </form>
+      <mat-spinner *ngIf="!contentLoaded" class="Spinner"></mat-spinner>
     </mat-card>
   </div>
 
-  <mat-card class="Video-Container" *ngIf="validated" [@Videoslide]="'in'">
+  <mat-card class="Video-Container" *ngIf="validated" [@Videoslide]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(300px)' : 'translateX(0%)'}">
     <video class="Current-Video" src="https://source-media-sum.s3-us-west-1.amazonaws.com/{{renderarray[0].Key}}" alt="" controls ></video>
   </mat-card>
 
-  <mat-card class="Side-Panel" *ngIf="validated" [@Videoslide]="'in'">
+  <mat-card class="Side-Panel" *ngIf="validated"  [@Videoslide]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(400px)' : 'translateX(0%)'}">
+    <div class="Pull-Out-Button" (click)="SidePanelOpen = !SidePanelOpen" [ngStyle]="{'transform' : SidePanelOpen ? 'rotate(180deg)' : 'rotate(0)'}">
+      <img src="../assets/SVG/next.svg" alt="" class="Pull-Out-Button-Arrow">
+    </div>
     <div class="Current-Details">
       <div class="Current-Details-Title-Row">
         <h2 class="Current-Details-Title">Current Render Stats</h2>
@@ -73,9 +77,9 @@
       </div>
     </div>
     <div class="row Next-Videos">
-        <div class="next-videos-tile" *ngFor="let video of renderarray">
-          {{video.Key}}
-        </div>
+        <mat-card class="next-videos-tile" *ngFor="let video of renderarray">
+
+        </mat-card>
     </div>
   </mat-card>
 </div>
