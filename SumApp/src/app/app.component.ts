@@ -49,7 +49,7 @@ export class AppComponent implements OnInit, OnDestroy {
   stillPhotoID = 1;
   stillPhotoTimeOut;
   registerForm: FormGroup;
-  validated = true;
+  validated = false;
   renderarray: any = [];
   contentLoaded = false;
   SidePanelOpen = false;
@@ -74,7 +74,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   // FUNCTION
     getRenderArray()  {
-      this.http.get('http://localhost:3000/getRenders')
+      this.http.get('https://3.22.81.118:3000/getRenders')
         .subscribe((data: Array<any>) =>  {
         data.forEach((render) => {
            this.renderarray.push({
