@@ -49,7 +49,7 @@ export class AppComponent implements OnInit, OnDestroy {
   stillPhotoID = 1;
   stillPhotoTimeOut;
   registerForm: FormGroup;
-  validated = true;
+  validated = false;
   renderarray: any = [];
   contentLoaded = false;
   SidePanelOpen = false;
