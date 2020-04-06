@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var AWS = require('aws-sdk');
+var dateFormat = require('dateformat');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -43,7 +44,9 @@ router.get('/getRenders', function(req, res, next) {
                             var RenderObject = {
                                 Key: object.Key,
                                 Sentiment: data1.Metadata.sentiment,
-                                Chronology: data1.Metadata.chronology
+                                Chronology: data1.Metadata.chronology,
+                                Date: dateFormat(object.LastModified, "dddd, mmmm dS, yyyy, h:MM:ss TT"),
+                                Count: data1.Metadata.count
                             };
                             RenderList.push(RenderObject);
                             if (RenderList.length === Count-1)    {

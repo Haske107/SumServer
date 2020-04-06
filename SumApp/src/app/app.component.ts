@@ -4,7 +4,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MustMatch} from './helper/validate-password';
 import {HttpClient} from '@angular/common/http';
-import {isArray} from 'util';
+
 
 @Component({
   selector: 'app-root',
@@ -49,10 +49,11 @@ export class AppComponent implements OnInit, OnDestroy {
   stillPhotoID = 1;
   stillPhotoTimeOut;
   registerForm: FormGroup;
-  validated = false;
+  validated = true;
   renderarray: any = [];
   contentLoaded = false;
   SidePanelOpen = false;
+  currentvideoindex = 0;
 
   constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private http: HttpClient, private _ChangeDetectorRef: ChangeDetectorRef) {
     this.registerForm = this.formBuilder.group({
@@ -79,8 +80,13 @@ export class AppComponent implements OnInit, OnDestroy {
            this.renderarray.push({
              Key: render.Key,
              Sentiment: parseInt(render.Sentiment, 10),
-             Chronology: parseInt(render.Chronology, 10)
+             Chronology: parseInt(render.Chronology, 10),
+             Date: render.Date,
+             Count: render.Count
            });
+        });
+        this.renderarray.sort((renderA, renderB) => {
+           return renderB.Count - renderA.Count
         });
         this._ChangeDetectorRef.detectChanges();
         this.contentLoaded = true;
@@ -126,6 +132,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
     }
   }
+    setCurrentVideo(selectedVideo: number) {
+      this.currentvideoindex = selectedVideo;
+    }
+
 
     get f() { return this.registerForm.controls; }
 

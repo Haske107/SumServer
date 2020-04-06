@@ -3,7 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/SumApp/src/assets/SVG/chronology.svg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SumApp/src/assets/SVG/chronology1.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SumApp/src/assets/SVG/face-1.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SumApp/src/assets/SVG/face-2.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SumApp/src/assets/SVG/face0.svg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SumApp/src/assets/SVG/face1.svg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SumApp/src/assets/SVG/face2.svg" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SumApp/src/assets/SVG/next.svg" charset="UTF-8" />
   </component>
 </project>
