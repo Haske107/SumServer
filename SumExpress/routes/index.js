@@ -49,6 +49,7 @@ router.get('/getRenders', function(req, res, next) {
                                 Count: data1.Metadata.count
                             };
                             RenderList.push(RenderObject);
+
                             if (RenderList.length === Count-1)    {
                                 res.send(RenderList) ;
                             }

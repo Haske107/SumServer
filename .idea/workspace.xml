@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca6729a7-aa5e-4e80-a22a-8857adafbb92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SumApp/src/assets/SUM STILLS/BG_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/app/app.component.css" afterPath="$PROJECT_DIR$/SumApp/src/app/app.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/app/app.component.html" afterPath="$PROJECT_DIR$/SumApp/src/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/app/app.component.ts" afterPath="$PROJECT_DIR$/SumApp/src/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/assets/SVG/chronology.svg" afterPath="$PROJECT_DIR$/SumApp/src/assets/SVG/chronology.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/assets/SVG/chronology1.svg" afterPath="$PROJECT_DIR$/SumApp/src/assets/SVG/chronology1.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/assets/SVG/face-1.svg" afterPath="$PROJECT_DIR$/SumApp/src/assets/SVG/face-1.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/assets/SVG/face-2.svg" afterPath="$PROJECT_DIR$/SumApp/src/assets/SVG/face-2.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/assets/SVG/face0.svg" afterPath="$PROJECT_DIR$/SumApp/src/assets/SVG/face0.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/assets/SVG/face1.svg" afterPath="$PROJECT_DIR$/SumApp/src/assets/SVG/face1.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumApp/src/assets/SVG/face2.svg" afterPath="$PROJECT_DIR$/SumApp/src/assets/SVG/face2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SumExpress/routes/index.js" afterPath="$PROJECT_DIR$/SumExpress/routes/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +20,8 @@
       <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SumApp/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+            <state relative-caret-position="308">
+              <caret line="60" column="39" lean-forward="false" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
                 <element signature="n#!!block;n#photo_rotate_start#0;n#AppComponent#0" expanded="false" />
@@ -43,21 +32,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SumApp/src/app/app.component.css">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SumExpress/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="638">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SumApp/src/app/app.component.html">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="132">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SumApp/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SumApp/src/app/app.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="face-1.svg" pinned="false" current-in-tab="true">
+      <file leaf-file-name="face-1.svg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SumApp/src/assets/SVG/face-1.svg">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -142,7 +151,6 @@
         <option value="$PROJECT_DIR$/SumApp/src/index.html" />
         <option value="$PROJECT_DIR$/SumApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/SumApp/src/assets/SVG/next.svg" />
-        <option value="$PROJECT_DIR$/SumExpress/routes/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/SumApp/.gitignore" />
         <option value="$PROJECT_DIR$/SumApp/src/assets/SVG/chronology1.svg" />
@@ -150,11 +158,12 @@
         <option value="$PROJECT_DIR$/SumApp/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/SumApp/src/app/app.component.css" />
         <option value="$PROJECT_DIR$/SumApp/src/assets/SVG/face2.svg" />
-        <option value="$PROJECT_DIR$/SumApp/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/SumApp/src/assets/SVG/face1.svg" />
         <option value="$PROJECT_DIR$/SumApp/src/assets/SVG/face-2.svg" />
         <option value="$PROJECT_DIR$/SumApp/src/assets/SVG/face0.svg" />
         <option value="$PROJECT_DIR$/SumApp/src/assets/SVG/face-1.svg" />
+        <option value="$PROJECT_DIR$/SumApp/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/SumExpress/routes/index.js" />
       </list>
     </option>
   </component>
@@ -179,7 +188,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/SumExpress/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="179" />
     <option name="y" value="-15" />
     <option name="width" value="1920" />
@@ -251,17 +260,19 @@
             <path>
               <item name="SumServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="SumServer" type="462c0819:PsiDirectoryNode" />
-              <item name="SumApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="SumExpress" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SumServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="SumServer" type="462c0819:PsiDirectoryNode" />
-              <item name="SumApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="SVG" type="462c0819:PsiDirectoryNode" />
+              <item name="SumExpress" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SumServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SumServer" type="462c0819:PsiDirectoryNode" />
+              <item name="SumExpress" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -322,7 +333,7 @@
       <workItem from="1586279864511" duration="4764000" />
       <workItem from="1586302402522" duration="92000" />
       <workItem from="1586556340286" duration="2170000" />
-      <workItem from="1586560113199" duration="1758000" />
+      <workItem from="1586560113199" duration="4903000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1585700872757</created>
@@ -349,10 +360,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75931000" />
+    <option name="totallyTimeSpent" value="79076000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1743941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -361,7 +372,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20576541" sideWeight="0.49789253" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.49789253" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -629,27 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SumExpress/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SumApp/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SumExpress/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -714,21 +704,8 @@
     <entry file="file://$PROJECT_DIR$/SumApp/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="726">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SumApp/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-            <element signature="n#!!block;n#photo_rotate_start#0;n#AppComponent#0" expanded="false" />
-            <element signature="n#!!block;n#photo_rotate_end#0;n#AppComponent#0" expanded="false" />
-            <element signature="n#!!block;n#rotate_photos#0;n#AppComponent#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,8 +751,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SumApp/src/assets/SVG/face-1.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SumApp/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SumApp/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="60" column="39" lean-forward="false" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+            <element signature="n#!!block;n#photo_rotate_start#0;n#AppComponent#0" expanded="false" />
+            <element signature="n#!!block;n#photo_rotate_end#0;n#AppComponent#0" expanded="false" />
+            <element signature="n#!!block;n#rotate_photos#0;n#AppComponent#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SumExpress/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
