@@ -5,7 +5,6 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import {MustMatch} from './helper/validate-password';
 import {HttpClient} from '@angular/common/http';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,25 +18,12 @@ import {HttpClient} from '@angular/common/http';
       // fade in when created. this could also be written as transition('void => *')
       transition(':enter', [
         style({opacity: 0}),
-        animate(900 )
+        animate(2000 )
       ]),
       // fade out when destroyed. this could also be written as transition('void => *')
       transition(':leave',
-        animate(900, style({opacity: 0})))
+        animate(2000, style({opacity: 0})))
     ]),
-    trigger('CardSlideOut', [
-      transition('* => void', [
-        animate('400ms cubic-bezier(0.35, 0, 0.25, 1)', style({transform: 'translateX(300%)'}))
-      ])
-    ]),
-    trigger('Videoslide', [
-      state('in', style({transform: 'translateX(0%)'})),
-      transition('void => *', [
-        animate('400ms cubic-bezier(0.35, 0, 0.25, 1)', style({transform: 'translateX(0%)'}))
-      ]),
-      state('out', style({transform: 'translateX(-300%)'}))
-
-    ])
   ]
 })
 
@@ -62,82 +48,74 @@ export class AppComponent implements OnInit, OnDestroy {
       validator: MustMatch('password')
     });
   }
-
   ngOnInit()  {
     this.photo_rotate_start();
     this.getRenderArray();
   }
-
   ngOnDestroy() {
     this.photo_rotate_end();
   }
 
   // FUNCTION
-    getRenderArray()  {
-      this.http.get('http://18.224.16.181:3000/getRenders')
-        .subscribe((data: Array<any>) =>  {
-        data.forEach((render) => {
-           this.renderarray.push({
-             Key: render.Key,
-             Sentiment: parseInt(render.Sentiment, 10),
-             Chronology: parseInt(render.Chronology, 10),
-             Date: render.Date,
-             Count: render.Count
-           });
-        });
-        this.renderarray.sort((renderA, renderB) => {
-           return renderB.Count - renderA.Count
-        });
-        this._ChangeDetectorRef.detectChanges();
-        this.contentLoaded = true;
+  getRenderArray()  {
+    this.http.get('http://localhost:3000/getRenders')
+      .subscribe((data: Array<any>) =>  {
+      data.forEach((render) => {
+         this.renderarray.push({
+           Key: render.Key,
+           Sentiment: parseInt(render.Sentiment, 10),
+           Chronology: parseInt(render.Chronology, 10),
+           Date: render.Date,
+           Count: render.Count
+         });
       });
-    }
-    photo_rotate_start()  {
-      this.stillPhotoTimeOut = setInterval(() =>  {
-        this.rotate_photos();
-      }, 2000);
-    }
-    photo_rotate_end()  {
-      clearInterval(this.stillPhotoTimeOut);
-    }
-    rotate_photos() {
-      // check if counter is in range
-      if (this.stillPhotoCounter > 6) {
-        this.stillPhotoCounter = 1;
-      }
-      // flip selector
-      this.stillPhotoSelector = !this.stillPhotoSelector;
-      // assign ID
-      if (this.stillPhotoSelector)  {
-        this.stillPhotoID = this.stillPhotoCounter;
-        this.stillPhotoCounter += 1;
-      } else  {
-        this.stillPhotoID = 0;
-      }
-
-
-
-
-    }
-    onSubmit() {
-
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
-      return;
-    } else {
-      this.snackBar.open('Welcome, Friend', '', {
-        duration: 3000
+      this.renderarray.sort((renderA, renderB) => {
+         return renderB.Count - renderA.Count
       });
-      this.validated = true;
-
-    }
+      this._ChangeDetectorRef.detectChanges();
+      this.contentLoaded = true;
+    });
   }
-    setCurrentVideo(selectedVideo: number) {
-      this.currentvideoindex = selectedVideo;
+  photo_rotate_start()  {
+    this.stillPhotoTimeOut = setInterval(() =>  {
+      this.rotate_photos();
+    }, 2000);
+  }
+  photo_rotate_end()  {
+    clearInterval(this.stillPhotoTimeOut);
+  }
+  rotate_photos() {
+    // check if counter is in range
+    if (this.stillPhotoCounter > 6) {
+      this.stillPhotoCounter = 1;
+    }
+    // flip selector
+    this.stillPhotoSelector = !this.stillPhotoSelector;
+    // assign ID
+    if (this.stillPhotoSelector)  {
+      this.stillPhotoID = this.stillPhotoCounter;
+      this.stillPhotoCounter += 1;
+    } else  {
+      this.stillPhotoID = 0;
     }
 
 
-    get f() { return this.registerForm.controls; }
 
+
+  }
+  onSubmit() {
+  // stop here if form is invalid
+  if (this.registerForm.invalid) {
+    return;
+  } else {
+    this.validated = true;
+
+  }
+}
+  setCurrentVideo(selectedVideo: number) {
+    this.currentvideoindex = selectedVideo;
+  }
+
+  get f() { return this.registerForm.controls; }
 
 }

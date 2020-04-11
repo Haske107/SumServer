@@ -1,18 +1,12 @@
 <div class="container">
   <div class="solid-white" [ngStyle]="{'opacity' : validated ? '1' : '0'} "></div>
   <div class="background-still" >
-    <img *ngIf="stillPhotoID === 1" src="../assets/SUM%20STILLS/Still_1.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'" >
-    <img *ngIf="stillPhotoID === 2" src="../assets/SUM%20STILLS/Still_2.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-    <img *ngIf="stillPhotoID === 3" src="../assets/SUM%20STILLS/Still_3.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-    <img *ngIf="stillPhotoID === 4" src="../assets/SUM%20STILLS/Still_4.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-    <img *ngIf="stillPhotoID === 5" src="../assets/SUM%20STILLS/Still_5.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-    <img *ngIf="stillPhotoID === 6" src="../assets/SUM%20STILLS/Still_6.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
-    <img *ngIf="stillPhotoID === 7" src="../assets/SUM%20STILLS/Still_7.jpeg" alt="" class="background-image-wrapper" [@fade]="'in'">
+    <img src="../assets/SUM%20STILLS/BG_1.jpg" alt="" class="background-image-wrapper" [@fade]="'in'">
   </div>
-  <div class="Title-Card-Parent" *ngIf="!validated" [@CardSlideOut]>
+  <div class="Title-Card-Parent" *ngIf="!validated" >
     <mat-card class="Title-Card">
-      <div class="Title-Wrapper row">
-        <h1 class="Title">SUM</h1>
+      <div class="Title-Wrapper">
+        <h1 class="Title">sum</h1>
       </div>
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" *ngIf="contentLoaded">
         <div class="form-group">
@@ -37,16 +31,16 @@
     </mat-card>
   </div>
 
-  <mat-card class="Video-Container" *ngIf="validated" [@Videoslide]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(300px)' : 'translateX(0%)'}">
+  <div class="Video-Container" *ngIf="validated" [@fade]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(300px)' : 'translateX(0%)'}">
     <video class="Current-Video" src="https://source-media-sum.s3-us-west-1.amazonaws.com/{{renderarray[currentvideoindex].Key}}" alt="" controls ></video>
-  </mat-card>
+  </div>
 
-  <mat-card class="Side-Panel" *ngIf="validated"  [@Videoslide]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(460px)' : 'translateX(0%)'}">
+  <mat-card class="Side-Panel" *ngIf="validated"  [@fade]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(460px)' : 'translateX(0%)'}">
     <div class="Pull-Out-Button" (click)="SidePanelOpen = !SidePanelOpen" [ngStyle]="{'transform' : SidePanelOpen ? 'rotate(180deg)' : 'rotate(0)'}">
       <img src="../assets/SVG/next.svg" alt="" class="Pull-Out-Button-Arrow">
     </div>
     <div class="row Next-Videos">
-        <mat-card class="next-videos-tile" *ngFor="let video of renderarray; let i = index" [ngStyle]="i === currentvideoindex ? {'background-color': '#673ab7'} : {}" (click)="setCurrentVideo(i)">
+        <mat-card class="next-videos-tile" *ngFor="let video of renderarray; let i = index" [ngStyle]="i === currentvideoindex ? {'background-color': '#1a1a1a'} : {}" (click)="setCurrentVideo(i)">
               <img *ngIf="renderarray[i].Sentiment === 4" src="../assets/SVG/face2.svg" alt="" class="Sentiment-Icon">
               <img *ngIf="renderarray[i].Sentiment === 3" src="../assets/SVG/face1.svg" alt="" class="Sentiment-Icon">
               <img *ngIf="renderarray[i].Sentiment === 2" src="../assets/SVG/face0.svg" alt="" class="Sentiment-Icon">
@@ -55,12 +49,12 @@
               <img *ngIf="renderarray[i].Chronology === 0" src="../assets/SVG/chronology.svg" alt="" class="Chronology-Icon">
               <img *ngIf="renderarray[i].Chronology === 1" src="../assets/SVG/chronology1.svg" alt="" class="Chronology-Icon">
               <div class="Iteration"># {{renderarray[i].Count}}</div>
-              <div class="Date">{{renderarray[i].Date}}</div>
+              <div class="Date">Rendered at: <br> {{renderarray[i].Date}}</div>
         </mat-card>
     </div>
-    <div class="Panel-Title">Video Buffer</div>
+    <div class="Panel-Title"></div>
     <div class="buffer-size">
-      {{renderarray.length}} Renders Available
+      {{renderarray.length}} Renders Available In Storage
     </div>
   </mat-card>
 </div>
