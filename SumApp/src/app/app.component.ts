@@ -58,7 +58,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   // FUNCTION
   getRenderArray()  {
-    this.http.get('http://http://18.224.16.181/:3000/getRenders')
+    this.http.get('http://18.224.16.181:3000/getRenders')
       .subscribe((data: Array<any>) =>  {
       data.forEach((render) => {
          this.renderarray.push({
