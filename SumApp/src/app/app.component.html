@@ -32,7 +32,8 @@
   </div>
 
   <div class="Video-Container" *ngIf="validated" [@fade]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(300px)' : 'translateX(0%)'}">
-    <video  class="Current-Video" src="https://source-media-sum.s3-us-west-1.amazonaws.com/{{renderarray[currentvideoindex].Key}}" alt=""  ></video>
+
+    <video  class="Current-Video" src="https://source-media-sum.s3-us-west-1.amazonaws.com/{{renderarray[currentvideoindex].Key}}" alt=""  autoplay></video>
   </div>
 
   <mat-card class="Side-Panel" *ngIf="validated"  [@fade]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(460px)' : 'translateX(0%)'}">
