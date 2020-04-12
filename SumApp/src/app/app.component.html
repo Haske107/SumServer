@@ -32,7 +32,7 @@
   </div>
 
   <div class="Video-Container" *ngIf="validated" [@fade]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(300px)' : 'translateX(0%)'}">
-    <video class="Current-Video" src="https://source-media-sum.s3-us-west-1.amazonaws.com/{{renderarray[currentvideoindex].Key}}" alt="" controls ></video>
+    <video  class="Current-Video" src="https://source-media-sum.s3-us-west-1.amazonaws.com/{{renderarray[currentvideoindex].Key}}" alt=""  ></video>
   </div>
 
   <mat-card class="Side-Panel" *ngIf="validated"  [@fade]="'in'" [ngStyle]="{'transform' : SidePanelOpen ? 'translateX(460px)' : 'translateX(0%)'}">
@@ -40,7 +40,7 @@
       <img src="../assets/SVG/next.svg" alt="" class="Pull-Out-Button-Arrow">
     </div>
     <div class="row Next-Videos">
-        <mat-card class="next-videos-tile" *ngFor="let video of renderarray; let i = index" [ngStyle]="i === currentvideoindex ? {'background-color': '#1a1a1a'} : {}" (click)="setCurrentVideo(i)">
+        <mat-card class="next-videos-tile" *ngFor="let video of renderarray; let i = index" [ngStyle]="i === currentvideoindex ? {'background-color': '#a7a7a7'} : {}" (click)="setCurrentVideo(i)">
               <img *ngIf="renderarray[i].Sentiment === 4" src="../assets/SVG/face2.svg" alt="" class="Sentiment-Icon">
               <img *ngIf="renderarray[i].Sentiment === 3" src="../assets/SVG/face1.svg" alt="" class="Sentiment-Icon">
               <img *ngIf="renderarray[i].Sentiment === 2" src="../assets/SVG/face0.svg" alt="" class="Sentiment-Icon">
@@ -48,7 +48,7 @@
               <img *ngIf="renderarray[i].Sentiment === 0" src="../assets/SVG/face-2.svg" alt="" class="Sentiment-Icon">
               <img *ngIf="renderarray[i].Chronology === 0" src="../assets/SVG/chronology.svg" alt="" class="Chronology-Icon">
               <img *ngIf="renderarray[i].Chronology === 1" src="../assets/SVG/chronology1.svg" alt="" class="Chronology-Icon">
-              <div class="Iteration"># {{renderarray[i].Count}}</div>
+              <div class="Iteration" [ngStyle]="i === currentvideoindex ? {'font-color': '#fafafa'} : {}" (click)="setCurrentVideo(i)"># {{renderarray[i].Count}}</div>
               <div class="Date">Rendered at: <br> {{renderarray[i].Date}}</div>
         </mat-card>
     </div>

@@ -13,7 +13,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #010101;
+  background-color: #000000;
   transition: 2s;
 }
 
@@ -26,12 +26,25 @@
   overflow: hidden;
   transition: .3s ;
   z-index: -1;
+  background-color: black;
 }
   .background-image-wrapper {
     overflow: hidden;
     transition: .3s ;
+    background-color: black;
 
-    height: 100vh;
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 100%;
+
+    /* Set up proportionate scaling */
+    width: 100vw;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
 
@@ -59,6 +72,9 @@
       top: calc(65% - 50px);
       left: calc(50% - 50px);
     }
+    ::ng-deep .mat-progress-spinner circle, .mat-spinner circle, .mat-input-element, .input-element  {
+      stroke: #fafafa;
+    }
     .Title-Wrapper  {
       position: absolute;
       width: 468px;
@@ -71,12 +87,11 @@
       .Title{
         height: 117px;
         padding-top: 117px;
-        font-family: 'Helvetica', sans-serif;
-        font-size: 100px;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 90px;
         opacity: .8;
         color: white;
         font-weight: 100;
-        text-shadow: 4px 4px 10px rgba(0,0,0,0.5);
 
       }
     .Password-Wrapper {
@@ -122,21 +137,24 @@
 .Video-Container  {
   position: absolute;
   height: 468px;
-  width: calc(468px * 1.778);
+  width: calc(468px * 1.5);
   top: calc(50% - 234px);
-  left: calc(50% - (468px * 1.778)/2);
-  background-color: #E3E4DB;
+  left: calc(50% - (468px * 1.5)/2);
+  overflow: hidden;
+  background-color: #000000;
   opacity: .8;
   backdrop-filter: blur(8px);
   transform: translateX(-300%);
   transition: transform 0.5s cubic-bezier(0.3, 0.2, 0.1, 1.2);
+  pqdding: 0;
 }
   .Current-Video  {
-    positon: absolute;
-    width: 100%;
+    position: absolute;
+    min-width: 100%;
+    height: 100%;
     outline: none;
     top: 0;
-    left: 0;
+    left: -65px;
   }
 .Side-Panel {
   position: absolute;
@@ -157,7 +175,7 @@
     width: 24px;
     height: 48px;
     background-color: #FFFFFA;
-    border-radius: 2px;
+    border-radius: 1px;
     z-index: 2;
     box-shadow: 0 0 6px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
@@ -201,7 +219,6 @@
     background-color: rgba(205, 205, 205, .5);
     border-radius: 1px;
     overflow-y: scroll;
-
   }
     .next-videos-tile {
       background: #e7e4e7;
@@ -211,12 +228,11 @@
       border-radius: 1px;
     }
     .next-videos-tile:hover {
-      background: #b4aeb2;
+      background: #bababa;
       margin: 6px;
       transition:  0.6s cubic-bezier(0.3, 0.2, 0.1, 1.2);
 
     }
-
     .next-videos-tile:active {
        background: #dbd8de;
        margin: 6px;
