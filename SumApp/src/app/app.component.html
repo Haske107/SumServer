@@ -1,7 +1,6 @@
 <div class="container">
   <div class="solid-white" [ngStyle]="{'opacity' : validated ? '1' : '0'} "></div>
-  <div class="background-still" >
-    <img src="../assets/SUM%20STILLS/BG_1.jpg" alt="" class="background-image-wrapper" [@fade]="'in'">
+  <div class="background-still" [@fade]="'in'">
   </div>
   <div class="Title-Card-Parent" *ngIf="!validated" >
     <mat-card class="Title-Card">
