@@ -123,10 +123,10 @@
 
 .Video-Container  {
   position: absolute;
-  height: 600px;
-  width: 1000px;
-  top: calc(50% - 300px);
-  left: calc(50% - 500px);
+  height: 70vh;
+  width: calc(70vh * 1.6);
+  top: 15vh;
+  left: calc(50% - (70vh * 1.6)/2);
   overflow: hidden;
   background-color: #000000;
   opacity: .8;
